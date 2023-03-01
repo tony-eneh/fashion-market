@@ -5,6 +5,7 @@ export interface IconProps extends IComponentProps {
 export interface IComponentProps {
     className?: string,
     style?: any,
+    children?: any,
 }
 
 export interface IProduct {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './Header.scss';
 import { SearchIcon, CartIcon, InboxIcon } from '../../icons';
+import { Badge } from '../Badge/Badge';
 export interface IHeaderProps {
   className?: string;
 }
@@ -10,15 +11,15 @@ export function Header(props: IHeaderProps) {
     <div className={'header-wrapper ' + (props.className || '')}>
       <div className="search">
         <SearchIcon variant="muted" className="opacity-50" />
-        <input type="text" placeholder="Search.."/>
+        <input type="text" placeholder="Search.." />
       </div>
       <div className="relative">
         <CartIcon className="mx-2" />
-        <div className="badge">1</div>
+        <Badge>1</Badge>
       </div>
       <div className="relative">
         <InboxIcon className="mx-2" />
-        <div className="badge">9+</div>
+        <Badge>9+</Badge>
       </div>
     </div>
   );
