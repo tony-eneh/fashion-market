@@ -8,15 +8,13 @@
         background-size: 50% auto;
         background-repeat: no-repeat;
         background-position: right bottom;
-        padding-top: 5em;
-        padding-left: 1em;
+        padding: 5em 1em 1em 1em;
         color: #2C2D3F;
         flex-basis: 100dvw;
         flex-shrink: 0;
         height: 100%;
-        position
 
-        button {
+        position button {
             background-color: #2C2D3F;
             color: white;
             font-size: x-small;
@@ -41,6 +39,27 @@
             background-image: url('../../images/shoes.jpeg');
             background-color: #C1BFC2;
             animation-delay: 2s;
+        }
+
+        .carousel-position-indicator {
+            display: flex;
+            flex: 0 0 auto;
+
+            .dot {
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                background-color: #848282;
+                margin-left: 2px;
+            }
+
+            .dash {
+                height: 4px;
+                width: 9px;
+                border-radius: 2px;
+                background-color: #121325;
+                margin-left: 2px;
+            }
         }
     }
 }
