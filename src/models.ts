@@ -1,5 +1,5 @@
 export interface IconProps extends IComponentProps {
-    variant?: 'active' | 'muted' | 'standard',
+    variant?: 'active' | 'muted' | 'standard' | 'white',
 }
 
 export interface IComponentProps {
@@ -18,4 +18,5 @@ export interface IProduct {
     price: number,
     liked?: boolean,
     moreImages?: string[],
+    sold?: number,
 }
