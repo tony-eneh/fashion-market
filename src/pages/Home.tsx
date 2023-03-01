@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Carousel, Header, SubNav } from '../components';
+import { MainNav } from '../components/MainNav/MainNav';
 import { ProductsList } from '../components/ProductsList/ProductsList';
 
 export interface IHomeProps {}
@@ -23,6 +24,7 @@ export function Home(props: IHomeProps) {
         <ProductsList />
       </div>
 
+      <MainNav />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { getColor } from '../helpers';
 import { IconProps } from '../models';
 import './icons.scss';
 
@@ -12,7 +13,8 @@ export function WalletIcon(props: IWalletIconProps) {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        stroke={getColor(props.variant)}
+        stroke-width=".5"
       >
         <path
           fill-rule="evenodd"
