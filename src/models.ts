@@ -16,5 +16,6 @@ export interface IProduct {
     rating: number,
     reviews: number,
     price: number,
-    liked?: boolean
+    liked?: boolean,
+    moreImages?: string[],
 }

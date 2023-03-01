@@ -9,7 +9,12 @@ const products: IProduct[] = [
         rating: 4,
         reviews: 2354,
         price: 23.5,
-        liked: true
+        liked: true,
+        moreImages: [
+            '/images/shirt-2.webp',
+            '/images/shirt-3.webp',
+            '/images/shirt-4.jpeg'
+        ]
     }, {
         id: 2,
         image: '/images/shirt-2.webp',
@@ -114,4 +119,8 @@ const products: IProduct[] = [
 
 export function getProducts() {
     return Promise.resolve(products)
+}
+
+export function getProductByID(id: number) {
+    return Promise.resolve(products.find(p => p.id == id)).then(p => !p ? Promise.reject() : p)
 }
