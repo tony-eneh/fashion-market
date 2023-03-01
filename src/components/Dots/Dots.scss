@@ -1,0 +1,21 @@
+.carousel-position-indicator {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+
+    .dot {
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: #848282;
+        margin-left: 2px;
+    }
+
+    .dash {
+        height: 4px;
+        width: 9px;
+        border-radius: 2px;
+        background-color: #121325;
+        margin-left: 2px;
+    }
+}

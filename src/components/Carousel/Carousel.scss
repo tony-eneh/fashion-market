@@ -1,10 +1,9 @@
 .carousel-wrapper {
-    height: 40lvh;
+    height: 250px;
     display: flex;
     animation: carousel 8s infinite forwards;
 
     .slide {
-        // height: 200px;
         background-size: 50% auto;
         background-repeat: no-repeat;
         background-position: right bottom;
@@ -14,7 +13,7 @@
         flex-shrink: 0;
         height: 100%;
 
-        position button {
+        button {
             background-color: #2C2D3F;
             color: white;
             font-size: x-small;
@@ -39,27 +38,6 @@
             background-image: url('../../images/shoes.jpeg');
             background-color: #C1BFC2;
             animation-delay: 2s;
-        }
-
-        .carousel-position-indicator {
-            display: flex;
-            flex: 0 0 auto;
-
-            .dot {
-                height: 4px;
-                width: 4px;
-                border-radius: 50%;
-                background-color: #848282;
-                margin-left: 2px;
-            }
-
-            .dash {
-                height: 4px;
-                width: 9px;
-                border-radius: 2px;
-                background-color: #121325;
-                margin-left: 2px;
-            }
         }
     }
 }
