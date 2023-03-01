@@ -1,7 +1,8 @@
-.wrapper {
+.header-wrapper {
     display: flex;
     align-items: center;
     padding: .5em 1em;
+    z-index: 5;
 
     .search {
         display: flex;
@@ -9,7 +10,7 @@
         border-radius: 5px;
         flex-grow: 1;
         padding: 6px 10px;
-
+        
         img {
             max-width: 2em;
         }
@@ -20,6 +21,7 @@
             outline: none;
             padding-left: 10px;
             font-size: 1em;
+            background-color: transparent;
         }
     }
 
