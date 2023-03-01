@@ -3,12 +3,12 @@
     align-items: center;
     padding: .5em 1em;
     z-index: 5;
-
+    width: 100%;
     .search {
         display: flex;
         border: 2px solid #D5D6D6;
         border-radius: 5px;
-        flex-grow: 1;
+        flex: 1 1 auto;
         padding: 6px 10px;
         
         img {
