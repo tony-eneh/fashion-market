@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: .5em 1em;
+
+    .search {
+        display: flex;
+        border: 2px solid #D5D6D6;
+        border-radius: 5px;
+        flex-grow: 1;
+        padding: 6px 10px;
+
+        img {
+            max-width: 2em;
+        }
+
+        input {
+            border: none;
+            flex-grow: 1;
+            outline: none;
+            padding-left: 10px;
+            font-size: 1em;
+        }
+    }
+
+    .icon {
+
+        img {
+            height: 100%;
+        }
+    }
+}
