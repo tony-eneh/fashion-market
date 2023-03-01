@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Carousel } from '../components/Carousel/Carousel';
-import { Header } from '../components/Header/Header';
+import { Carousel, Header, SubNav } from '../components';
 
 export interface IHomeProps {}
 
@@ -11,6 +10,7 @@ export function Home(props: IHomeProps) {
         <Header className="absolute" />
         <Carousel />
       </div>
+      <SubNav />
     </div>
   );
 }
