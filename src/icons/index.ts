@@ -1,5 +1,6 @@
 export * from './Bill';
 export * from './Cart';
+export * from './Caret';
 export * from './Category';
 export * from './Flight';
 export * from './Heart';

@@ -3,7 +3,7 @@ import { IconProps } from '../models';
 
 export interface IHeartIconProps extends IconProps {
   fill?: boolean;
-  onClick: React.MouseEventHandler<HTMLElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export function HeartIcon({className, fill, ...restProps}: IHeartIconProps) {

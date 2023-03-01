@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { Home } from './pages/Home';
+import { ProductDetail } from './pages/ProductDetail';
 import { Settings } from './pages/Settings';
 import { Voucher } from './pages/Voucher';
 import { Wallet } from './pages/Wallet';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/wallet',
     element: <Wallet />,
+  },
+  {
+    path: '/products/:id',
+    element: <ProductDetail />,
   },
   {
     path: '*',
