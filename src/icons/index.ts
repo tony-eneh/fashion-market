@@ -2,6 +2,7 @@ export * from './Bill';
 export * from './Cart';
 export * from './Category';
 export * from './Flight';
+export * from './Heart';
 export * from './Home';
 export * from './Inbox';
 export * from './Search';

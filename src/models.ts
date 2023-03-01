@@ -6,3 +6,14 @@ export interface IComponentProps {
     className?: string,
     style?: any,
 }
+
+export interface IProduct {
+    id: number,
+    image: string,
+    type: string,
+    description: string,
+    rating: number,
+    reviews: number,
+    price: number,
+    liked?: boolean
+}
