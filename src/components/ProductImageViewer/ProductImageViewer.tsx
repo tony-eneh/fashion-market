@@ -42,7 +42,10 @@ export function ProductImageViewer({ product }: IProductImageViewerProps) {
     <div className="relative">
       <img
         style={{
-          maxHeight: '700px',
+          // maxHeight: '700px',
+          width: '100%',
+          objectFit: 'contain',
+          border: '1px solid #31344933'
         }}
         src={currentImage || product.image}
         alt="product image"
