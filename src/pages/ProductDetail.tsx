@@ -221,10 +221,10 @@ export function ProductDetail({ location }: IProductDetailProps) {
             <p className="font-bold text-sm">Reviews with images & videos</p>
             <ImageThumbnails>
               <img src={product.image} alt="" />
-              <img src="/images/shirt-3.webp" alt="" />
-              <img src="/images/shirt-11.jpeg" alt="" />
+              <img src={`${process.env.REACT_APP_API_URL}/images/shirt-3.webp`} alt="" />
+              <img src={`${process.env.REACT_APP_API_URL}/images/shirt-11.jpeg`} alt="" />
               <div className="relative">
-                <img src="/images/shirt-12.jpeg" alt="" />
+                <img src={`${process.env.REACT_APP_API_URL}/images/shirt-12.jpeg`} alt="" />
                 <span className="absolute text-xs text-white font-bold">
                   132+
                 </span>
