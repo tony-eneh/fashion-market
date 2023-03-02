@@ -25,6 +25,11 @@ export function Home(props: IHomeProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  React.useEffect(() => {
+    // scroll to top on mount
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <AnimatePresence>
       <motion.div

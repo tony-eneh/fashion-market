@@ -85,6 +85,11 @@ export function ProductDetail({ location }: IProductDetailProps) {
     getReviews().then((reviews) => setReviews(reviews));
   }, [reviews]);
 
+  React.useEffect(() => {
+    // scroll to top on mount
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
+
   return (
     <AnimatePresence>
       <motion.div
