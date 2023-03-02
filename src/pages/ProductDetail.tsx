@@ -98,7 +98,7 @@ export function ProductDetail(props: IProductDetailProps) {
         </p>
         <div className="flex text-gray-400 items-center my-2">
           <StarIcon style={{ width: '1.2em' }} />
-          <span>{product.rating} Ratings</span>
+          <span>{(product.rating || 0).toFixed(1)} Ratings</span>
           <span className="mx-auto">&bull;</span>
           <span>{shortenNumber(product.reviews)} Reviews</span>
           <span className="mx-auto">&bull;</span>
@@ -140,9 +140,9 @@ export function ProductDetail(props: IProductDetailProps) {
           <div>
             Shipping:{' '}
             <span className="font-bold text-[#313449]">
-              {product.shipping == 0
+              {!product.shipping
                 ? 'FREE International Shipping'
-                : `$${product.shipping?.toFixed(2)}`}
+                : `$${product.shipping.toFixed(2)}`}
             </span>
           </div>
           <div>
@@ -185,7 +185,7 @@ export function ProductDetail(props: IProductDetailProps) {
             <div className="flex flex-col">
               <div className="flex items-end space-x-1">
                 <div className="text-4xl font-bold text-[#313449]">
-                  {product.rating?.toFixed(1)}
+                  {(product.rating || 0).toFixed(1)}
                 </div>
                 <div>/ 5.0</div>
               </div>
@@ -223,7 +223,7 @@ export function ProductDetail(props: IProductDetailProps) {
             <div>
               <p className="font-bold">Top Reviews</p>
               <p className="text-sm text-gray-400">
-                Showing 3 of {shortenNumber(product.reviews)} Reviews
+                Showing 2 of {shortenNumber(product.reviews)} Reviews
               </p>
             </div>
             <button

@@ -68,7 +68,7 @@ export function Product({ product }: IProductProps) {
               <span className="block text-sm mx-1">{product.reviews}</span>
             </div>
             <div className="font-bold text-2xl text-[#4ca78d]">
-              ${product.price.toFixed(2)}
+              ${product.price?.toFixed(2)}
             </div>
           </div>
         </div>
