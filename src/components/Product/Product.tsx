@@ -13,7 +13,7 @@ const ProductsWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  src: ${(props) => props.src};
+  src: '${(props) => props.src}';
   height: 120px;
   width: 100%;
   object-fit: cover;
