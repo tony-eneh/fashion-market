@@ -55,7 +55,7 @@ export function Product({ product }: IProductProps) {
           }}
         />
       </div>
-      <Link className="flex flex-col flex-grow" to={'/products/' + product.id}>
+      <Link className="flex flex-col flex-grow" to={'/fashion-market/products/' + product.id}>
         <Image src={product.image} />
         <div className="p-2 bg-gray-100 flex-grow flex flex-col">
           <div className="text-gray-400 font-bold">{product.type}</div>

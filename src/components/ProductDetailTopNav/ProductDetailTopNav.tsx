@@ -18,7 +18,7 @@ export interface IProductDetailTopNavProps {}
 export function ProductDetailTopNav(props: IProductDetailTopNavProps) {
   return (
     <Sticky className="flex justify-between p-3">
-      <Link to="/home">
+      <Link to="/fashion-market">
         <CaretIcon direction="left" />
       </Link>
       <div className="flex justify-between space-x-3">
