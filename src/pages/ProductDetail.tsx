@@ -244,6 +244,8 @@ export function ProductDetail(props: IProductDetailProps) {
           <Review review={review} />
         ))}
 
+        <Paginator />
+
       {/* footer section with CTA button */}
       <div
         className="flex justify-between fixed bottom-0 w-full h-16 bg-white left-0 p-2"

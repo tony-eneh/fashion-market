@@ -13,3 +13,4 @@ export * from './Rating/Rating';
 export * from './RatingsCount/RatingsCount';
 export * from './ProgressBar/ProgressBar';
 export * from './Review/Review';
+export * from './Paginator/Paginator';
