@@ -14,7 +14,19 @@ const products: IProduct[] = [
             '/images/shirt-2.webp',
             '/images/shirt-3.webp',
             '/images/shirt-4.jpeg'
-        ]
+        ],
+        brand: 'ChArmkpR',
+        color: 'Aprikot',
+        category: 'Casual Shirt',
+        material: 'Polyester',
+        condition: 'New',
+        weight: '200 g',
+        details: [
+            'Long-sleeve dress hirt in classic fit featuring button-down collar', 'Patch Pocket on Left Chest', 'Durable Combination Cotton Fabric', 'Comfortable and quality dress shirt', 'Go To Classic button down shirt for all special occasions'
+        ],
+        shippedFrom: 'Jakarta, Indonesia',
+        shipping: 0,
+        estimatedArrivalDate: '25 - 27 Oct 2022'
     }, {
         id: 2,
         image: '/images/shirt-2.webp',
