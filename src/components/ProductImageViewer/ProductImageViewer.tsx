@@ -37,7 +37,6 @@ export interface IProductImageViewerProps extends IComponentProps {
 export function ProductImageViewer({ product }: IProductImageViewerProps) {
   const [currentImage, setCurrentImage] = React.useState(product.image);
 
-  React.useEffect(() => console.log('product changed to: ', product));
   return (
     <div className="relative">
       <img
@@ -45,7 +44,7 @@ export function ProductImageViewer({ product }: IProductImageViewerProps) {
           // maxHeight: '700px',
           width: '100%',
           objectFit: 'contain',
-          border: '1px solid #31344933'
+          border: '1px solid #31344933',
         }}
         src={currentImage || product.image}
         alt="product image"
