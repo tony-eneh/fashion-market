@@ -9,7 +9,7 @@ const ProductsWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   position: relative;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
 `;
 
 const Image = styled.img`

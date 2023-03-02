@@ -3,8 +3,10 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { getProductByID, getReviews } from '../api';
 import {
+  Paginator,
   ProductDetailTopNav,
   ProductImageViewer,
+  ProductsList,
   Rating,
   RatingsCount,
   Review,
@@ -246,6 +248,15 @@ export function ProductDetail(props: IProductDetailProps) {
 
         <Paginator />
 
+        <div className="my-7">
+          <div className="text-sm flex justify-between font-bold">
+            <div>Recommendation</div>
+            <div className="text-[#4ca78d] text-xs">See more</div>
+          </div>
+
+          <ProductsList viewCount={2} />
+        </div>
+      </div>
       {/* footer section with CTA button */}
       <div
         className="flex justify-between fixed bottom-0 w-full h-16 bg-white left-0 p-2"

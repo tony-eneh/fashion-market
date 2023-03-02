@@ -12,9 +12,11 @@ const Wrapper = styled.div`
   grid-auto-rows: 1fr;
   grid-gap: 20px;
 `;
-export interface IProductsListProps {}
+export interface IProductsListProps {
+  viewCount?: number;
+}
 
-export function ProductsList(props: IProductsListProps) {
+export function ProductsList({ viewCount }: IProductsListProps) {
   const [products, setProducts] = useState([] as IProduct[]);
 
   useEffect(() => {
@@ -23,9 +25,12 @@ export function ProductsList(props: IProductsListProps) {
 
   return (
     <Wrapper>
-      {products.map((product) => (
-        <Product product={product} key={product.id} />
-      ))}
+      {products
+        //   if a specific number of products was requried, output that number, else output all products
+        .filter((product, index) => (!!viewCount ? index < viewCount : true))
+        .map((product) => (
+          <Product product={product} key={product.id} />
+        ))}
     </Wrapper>
   );
 }
