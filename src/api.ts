@@ -1,4 +1,4 @@
-import { IProduct } from "./models"
+import { IProduct, IReview } from "./models"
 
 const products: IProduct[] = [
     {
@@ -135,4 +135,29 @@ export function getProducts() {
 
 export function getProductByID(id: number) {
     return Promise.resolve(products.find(p => p.id == id)).then(p => !p ? Promise.reject() : p)
+}
+
+const reviews: IReview[] = [
+    {
+        authorImage: '/logo192.png',
+        authorName: 'Eren Harcourt',
+        date: 'Yesterday',
+        text: 'According to my expectations. This is the best. Thank you',
+        rating: 5,
+        tags: [
+            'Product in good condition', 'Very fast delivery', 'Fast seller response'
+        ]
+    },{
+        authorImage: '/images/shirt-11.jpeg',
+        authorName: 'Akpabio Lucky',
+        date: 'Yesterday',
+        text: 'According to my expectations. This is the best. Thank you',
+        rating: 5,
+        tags: [
+            'Product in good condition', 'Very fast delivery', 'Fast seller response'
+        ]
+    }
+]
+export function getReviews() {
+    return Promise.resolve(reviews)
 }

@@ -1,10 +1,18 @@
 import * as React from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import { getProductByID, getReviews } from '../api';
+import {
   ProductDetailTopNav,
+  ProductImageViewer,
+  Rating,
+  RatingsCount,
+  Review,
   TabbedContent,
 } from '../components';
 import { shortenNumber } from '../helpers';
 import { CaretIcon, CartIcon, StarIcon, StoreIcon } from '../icons';
+import { IProduct, IReview } from '../models';
 
 const SellerImage = styled.div`
   height: 75px;
@@ -60,6 +68,8 @@ export interface IProductDetailProps {}
 
 export function ProductDetail(props: IProductDetailProps) {
   const [product, setProduct] = React.useState({} as IProduct);
+  // TODO remove hardcoded seller data. Fetch from an api and set in state
+  const [reviews, setReviews] = React.useState([] as IReview[]);
   const { id } = useParams();
 
   React.useEffect(() => {
@@ -67,6 +77,9 @@ export function ProductDetail(props: IProductDetailProps) {
       setProduct(product);
     });
   }, []);
+
+  React.useEffect(() => {
+    getReviews().then((reviews) => setReviews(reviews));
   }, []);
 
   return (
@@ -164,6 +177,73 @@ export function ProductDetail(props: IProductDetailProps) {
           </div>
         </div>
         <hr />
+        <div className="my-7 text-sm text-gray-400">
+          <div className="font-bold text-[#313449]">Reviews & Ratings</div>
+          <div className="flex space-x-2">
+            <div className="flex flex-col">
+              <div className="flex items-end space-x-1">
+                <div className="text-4xl font-bold text-[#313449]">
+                  {product.rating?.toFixed(1)}
+                </div>
+                <div>/ 5.0</div>
+              </div>
+              <Rating rating={product.rating} />
+              <div className="mt-auto text-xs">
+                {shortenNumber(product.reviews)} Reviews
+              </div>
+            </div>
+            <RatingsCount
+              className="flex-grow"
+              ratingsCount={{ 1: 4, 2: 10, 3: 140, 4: 710, 5: 1500 }}
+            />
+          </div>
+        </div>
+
+        <div className="my-5">
+          <p className="font-bold text-sm">Reviews with images & videos</p>
+          <ImageThumbnails>
+            <img src={product.image} alt="" />
+            <img src="/images/shirt-3.webp" alt="" />
+            <img src="/images/shirt-11.jpeg" alt="" />
+            <div className="relative">
+              <img src="/images/shirt-12.jpeg" alt="" />
+              <span className="absolute text-xs text-white font-bold">
+                132+
+              </span>
+            </div>
+          </ImageThumbnails>
+        </div>
+
+        <hr />
+
+        <div className="my-7">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="font-bold">Top Reviews</p>
+              <p className="text-sm text-gray-400">
+                Showing 3 of {shortenNumber(product.reviews)} Reviews
+              </p>
+            </div>
+            <button
+              style={{ border: '1px solid rgba(0, 0, 0, 0.25' }}
+              className="flex items-center text-xs space-x-2 bg-gray-100 rounded px-2 py-1"
+            >
+              <span className="font-bold mr-3">Popular</span>
+              <CaretIcon
+                style={{
+                  transform: 'translateY(-2px) scale(.6)',
+                  opacity: 0.5,
+                }}
+                direction="down"
+              />
+            </button>
+          </div>
+        </div>
+
+        {reviews.map((review) => (
+          <Review review={review} />
+        ))}
+
       {/* footer section with CTA button */}
       <div
         className="flex justify-between fixed bottom-0 w-full h-16 bg-white left-0 p-2"

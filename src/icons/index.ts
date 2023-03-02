@@ -15,3 +15,4 @@ export * from './TopUp';
 export * from './Voucher';
 export * from './Wallet';
 export * from './Web';
+export * from './Like';
