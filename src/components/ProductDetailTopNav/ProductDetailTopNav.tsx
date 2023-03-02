@@ -1,13 +1,23 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { CaretIcon, CartIcon, HeartIcon, ShareIcon } from '../../icons';
 import { Badge } from '../Badge/Badge';
 
+const Sticky = styled.div`
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+`;
 export interface IProductDetailTopNavProps {}
 
 export function ProductDetailTopNav(props: IProductDetailTopNavProps) {
   return (
-    <div className="flex justify-between p-3">
+    <Sticky className="flex justify-between p-3">
       <Link to="/home">
         <CaretIcon direction="left" />
       </Link>
@@ -19,6 +29,6 @@ export function ProductDetailTopNav(props: IProductDetailTopNavProps) {
           <Badge>1</Badge>
         </div>
       </div>
-    </div>
+    </Sticky>
   );
 }

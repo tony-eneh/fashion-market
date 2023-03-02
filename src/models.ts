@@ -7,6 +7,7 @@ export interface IComponentProps {
     className?: string,
     style?: any,
     children?: any,
+    ref?: any,
 }
 
 export interface IProduct {

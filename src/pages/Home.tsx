@@ -7,6 +7,24 @@ import { ProductsList } from '../components/ProductsList/ProductsList';
 export interface IHomeProps {}
 
 export function Home(props: IHomeProps) {
+  const [opaqueHeader, setOpaqueHeader] = React.useState(false);
+  const subNavRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      // @ts-ignore
+      const subNavTop = subNavRef.current?.getBoundingClientRect().top;
+      if (subNavTop <= 0) {
+        setOpaqueHeader(true);
+      } else {
+        setOpaqueHeader(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <AnimatePresence>
       <motion.div
@@ -15,13 +33,18 @@ export function Home(props: IHomeProps) {
         transition={{ duration: 0.7 }}
       >
         <div className="relative w-full overflow-x-hidden">
-          <Header className="absolute" />
+          <Header className={opaqueHeader ? 'opaque' : ''} />
           <Carousel />
         </div>
-        <SubNav />
+        <div ref={subNavRef}>
+          <SubNav />
+        </div>
 
         <div className="p-2" style={{ marginBottom: '70px' }}>
-          <div className="flex justify-between">
+          <div
+            className="flex justify-between sticky bg-white py-2 z-10"
+            style={{ top: '5rem' }}
+          >
             <h3 className="font-bold text-2xl" style={{ color: '#2C2D3F' }}>
               Best Sale Product
             </h3>

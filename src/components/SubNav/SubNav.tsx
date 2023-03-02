@@ -7,6 +7,7 @@ import {
   TopUpIcon,
   WebIcon,
 } from '../../icons';
+import { IComponentProps } from '../../models';
 import { Dots } from '../Dots/Dots';
 
 const NavButtons = styled.div`
@@ -38,9 +39,9 @@ const NavButtons = styled.div`
     }
   }
 `;
-export interface ISubNavProps {}
+export interface ISubNavProps extends IComponentProps {}
 
-export function SubNav(props: ISubNavProps) {
+export const SubNav = React.forwardRef(function (props: ISubNavProps) {
   return (
     <div>
       <NavButtons>
@@ -68,4 +69,4 @@ export function SubNav(props: ISubNavProps) {
       <Dots position="start" className="mt-3" />
     </div>
   );
-}
+});
