@@ -41,7 +41,7 @@ const NavButtons = styled.div`
 `;
 export interface ISubNavProps extends IComponentProps {}
 
-export const SubNav = React.forwardRef(function (props: ISubNavProps) {
+export const SubNav = React.forwardRef(function (props: ISubNavProps, ref) {
   return (
     <div>
       <NavButtons>

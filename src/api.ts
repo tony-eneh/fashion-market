@@ -3,7 +3,7 @@ import { IProduct, IReview } from "./models"
 const products: IProduct[] = [
     {
         id: 1,
-        image: '/images/shirt-1.webp',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-1.webp',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag. Short beautiful shirt wey get swag",
         rating: 4,
@@ -11,9 +11,9 @@ const products: IProduct[] = [
         price: 23.5,
         liked: true,
         moreImages: [
-            '/images/shirt-2.webp',
-            '/images/shirt-3.webp',
-            '/images/shirt-4.jpeg'
+            process.env.REACT_APP_API_URL + '/images/shirt-2.webp',
+            process.env.REACT_APP_API_URL + '/images/shirt-3.webp',
+            process.env.REACT_APP_API_URL + '/images/shirt-4.jpeg'
         ],
         brand: 'ChArmkpR',
         color: 'Aprikot',
@@ -29,7 +29,7 @@ const products: IProduct[] = [
         estimatedArrivalDate: '25 - 27 Oct 2022'
     }, {
         id: 2,
-        image: '/images/shirt-2.webp',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-2.webp',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -38,7 +38,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 3,
-        image: '/images/shirt-3.webp',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-3.webp',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -47,7 +47,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 4,
-        image: '/images/shirt-4.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-4.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -56,7 +56,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 5,
-        image: '/images/shirt-5.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-5.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -65,7 +65,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 6,
-        image: '/images/shirt-6.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-6.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -74,7 +74,7 @@ const products: IProduct[] = [
         liked: true
     }, {
         id: 7,
-        image: '/images/shirt-7.webp',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-7.webp',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -83,7 +83,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 8,
-        image: '/images/shirt-8.webp',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-8.webp',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -92,7 +92,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 9,
-        image: '/images/shirt-9.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-9.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -101,7 +101,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 10,
-        image: '/images/shirt-10.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-10.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -110,7 +110,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 11,
-        image: '/images/shirt-11.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-11.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -119,7 +119,7 @@ const products: IProduct[] = [
         liked: false
     }, {
         id: 12,
-        image: '/images/shirt-12.jpeg',
+        image: process.env.REACT_APP_API_URL + '/images/shirt-12.jpeg',
         type: 'Shirt',
         description: "Short beautiful shirt wey get swag",
         rating: 4,
@@ -147,8 +147,8 @@ const reviews: IReview[] = [
         tags: [
             'Product in good condition', 'Very fast delivery', 'Fast seller response'
         ]
-    },{
-        authorImage: '/images/shirt-11.jpeg',
+    }, {
+        authorImage: process.env.REACT_APP_API_URL + '/images/shirt-11.jpeg',
         authorName: 'Akpabio Lucky',
         date: 'Yesterday',
         text: 'According to my expectations. This is the best. Thank you',

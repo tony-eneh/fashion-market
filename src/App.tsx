@@ -12,28 +12,28 @@ import { Wallet } from './pages/Wallet';
 
 const router = createBrowserRouter([
   {
-    path: '/home',
+    path: '/fashion-market',
     element: <Home />,
   },
   {
-    path: '/settings',
+    path: '/fashion-market/settings',
     element: <Settings />,
   },
   {
-    path: '/voucher',
+    path: '/fashion-market/voucher',
     element: <Voucher />,
   },
   {
-    path: '/wallet',
+    path: '/fashion-market/wallet',
     element: <Wallet />,
   },
   {
-    path: '/products/:id',
+    path: '/fashion-market/products/:id',
     element: <ProductDetail />,
   },
   {
     path: '*',
-    element: <Navigate replace to="/home" />,
+    element: <Navigate replace to="/fashion-market" />,
   },
 ]);
 
