@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/fashion-market/static/css/main.c88d84ed.css",
-    "main.js": "/fashion-market/static/js/main.fba227b2.js",
+    "main.js": "/fashion-market/static/js/main.ff059758.js",
     "static/js/787.1171c9e2.chunk.js": "/fashion-market/static/js/787.1171c9e2.chunk.js",
     "static/media/cosmetics.jpeg": "/fashion-market/static/media/cosmetics.3ed9a82948a810d3b159.jpeg",
     "static/media/clothes.jpeg": "/fashion-market/static/media/clothes.0f89702f8ead46ebfdfa.jpeg",
     "static/media/shoes.jpeg": "/fashion-market/static/media/shoes.94c73612a1f4b04904eb.jpeg",
     "index.html": "/fashion-market/index.html",
     "main.c88d84ed.css.map": "/fashion-market/static/css/main.c88d84ed.css.map",
-    "main.fba227b2.js.map": "/fashion-market/static/js/main.fba227b2.js.map",
+    "main.ff059758.js.map": "/fashion-market/static/js/main.ff059758.js.map",
     "787.1171c9e2.chunk.js.map": "/fashion-market/static/js/787.1171c9e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c88d84ed.css",
-    "static/js/main.fba227b2.js"
+    "static/js/main.ff059758.js"
   ]
 }
