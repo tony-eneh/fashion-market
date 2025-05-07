@@ -8,7 +8,7 @@ export interface ICategoryIconProps extends IconProps {}
 export function CategoryIcon(props: ICategoryIconProps) {
   return (
     <div className={'icon ' + props.className}>
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={getColor(props.variant)} stroke-width="1px">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={getColor(props.variant)} strokeWidth="1px">
         <path
           d="M27.71 2.5H8C6.54212 2.50264 5.14471 3.08295 4.11383 4.11383C3.08295 5.14471 2.50264 6.54212 2.5 8V27.71C2.5 28.1078 2.65804 28.4894 2.93934 28.7707C3.22064 29.052 3.60218 29.21 4 29.21H23.71C25.1687 29.21 26.5676 28.6305 27.5991 27.5991C28.6305 26.5676 29.21 25.1687 29.21 23.71V4C29.21 3.60218 29.052 3.22064 28.7707 2.93934C28.4894 2.65804 28.1078 2.5 27.71 2.5ZM26.21 23.71C26.21 24.0383 26.1453 24.3634 26.0197 24.6667C25.8941 24.97 25.7099 25.2456 25.4778 25.4778C25.2456 25.7099 24.97 25.8941 24.6667 26.0197C24.3634 26.1453 24.0383 26.21 23.71 26.21H5.5V8C5.5 7.33696 5.76339 6.70107 6.23223 6.23223C6.70107 5.76339 7.33696 5.5 8 5.5H26.21V23.71Z"
           fill={'#333'}

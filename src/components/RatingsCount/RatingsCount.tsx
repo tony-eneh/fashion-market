@@ -24,9 +24,9 @@ export function RatingsCount({
     <div {...restProps}>
       {/* @ts-ignore */}
       {[5, 4, 3, 2, 1].map((num: IRatingsIndex) => (
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2" key={num}>
           <StarIcon style={smallIcon} />
-          <span className='w-3'>{num}</span>
+          <span className="w-3">{num}</span>
           <ProgressBar
             className="flex-grow overflow-hidden"
             percent={(ratingsCount[num] / total) * 100}

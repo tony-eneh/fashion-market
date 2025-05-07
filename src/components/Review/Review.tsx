@@ -56,7 +56,7 @@ export function Review({ review }: IReviewProps) {
 
       <div className="overflow-x-hidden pb-1">
         {review?.tags?.map((tag) => (
-          <Pill>{tag}</Pill>
+          <Pill key={tag}>{tag}</Pill>
         ))}
       </div>
 

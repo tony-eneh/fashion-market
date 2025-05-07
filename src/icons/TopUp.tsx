@@ -14,7 +14,7 @@ export function TopUpIcon(props: ITopUpIconProps) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         stroke={getColor(props.variant)}
-        stroke-width="10px"
+        strokeWidth="10px"
       >
         <title>Coins</title>
         <path d="M256,21.333C126.6,21.333,21.333,126.6,21.333,256S126.6,490.667,256,490.667,490.667,385.4,490.667,256,385.4,21.333,256,21.333Zm0,448c-117.63,0-213.333-95.7-213.333-213.333S138.37,42.667,256,42.667,469.333,138.367,469.333,256,373.63,469.333,256,469.333Z" />

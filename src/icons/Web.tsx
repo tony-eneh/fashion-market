@@ -14,7 +14,7 @@ export function WebIcon(props: IWebIconProps) {
         id="Capa_1"
         viewBox="0 0 58 58"
         stroke={getColor(props.variant)}
-        stroke-width="2px"
+        strokeWidth="2px"
       >
         <path
           d="M50.688,48.222C55.232,43.101,58,36.369,58,29c0-7.667-2.996-14.643-7.872-19.834c0,0,0-0.001,0-0.001

@@ -124,7 +124,7 @@ export function ProductDetail({ location }: IProductDetailProps) {
             <div className="font-bold my-3">Description:</div>
             <ul className="text-gray-400 text-sm list-disc pl-4">
               {product.details?.map((point) => (
-                <li>{point}</li>
+                <li key={point}>{point}</li>
               ))}
             </ul>
           </div>
@@ -221,10 +221,19 @@ export function ProductDetail({ location }: IProductDetailProps) {
             <p className="font-bold text-sm">Reviews with images & videos</p>
             <ImageThumbnails>
               <img src={product.image} alt="" />
-              <img src={`${process.env.REACT_APP_API_URL}/images/shirt-3.webp`} alt="" />
-              <img src={`${process.env.REACT_APP_API_URL}/images/shirt-11.jpeg`} alt="" />
+              <img
+                src={`${process.env.REACT_APP_API_URL}/images/shirt-3.webp`}
+                alt=""
+              />
+              <img
+                src={`${process.env.REACT_APP_API_URL}/images/shirt-11.jpeg`}
+                alt=""
+              />
               <div className="relative">
-                <img src={`${process.env.REACT_APP_API_URL}/images/shirt-12.jpeg`} alt="" />
+                <img
+                  src={`${process.env.REACT_APP_API_URL}/images/shirt-12.jpeg`}
+                  alt=""
+                />
                 <span className="absolute text-xs text-white font-bold">
                   132+
                 </span>
@@ -258,8 +267,8 @@ export function ProductDetail({ location }: IProductDetailProps) {
             </div>
           </div>
 
-          {reviews.map((review) => (
-            <Review review={review} />
+          {reviews.map((review, index) => (
+            <Review review={review} key={index} />
           ))}
 
           <Paginator />

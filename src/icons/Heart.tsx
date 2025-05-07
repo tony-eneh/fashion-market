@@ -15,7 +15,7 @@ export function HeartIcon({className, fill, ...restProps}: IHeartIconProps) {
         id="Capa_1"
         viewBox="-20 -20 410 410"
         stroke={fill ? 'red' : 'black'}
-        stroke-width="30"
+        strokeWidth="30"
         stroke-mode="inside"
       >
         <g>
